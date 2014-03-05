@@ -1,4 +1,4 @@
-![](https://github.com/Joshka-Randora/wallet_tutorial_series/1EqTi4NqfWpdzNDHJyVPfhEY4TuT7YsFAj.png)
+![Image](./1EqTi4NqfWpdzNDHJyVPfhEY4TuT7YsFAj.png?raw=true)
 
 *Bitcoin Donation Address:* 1EqTi4NqfWpdzNDHJyVPfhEY4TuT7YsFAj
 
