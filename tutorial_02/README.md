@@ -64,17 +64,18 @@ clone this code to your machine
 
     $ bitcoind getinfo
 
-## Step 5
+## Step 3
 
 ### Execute this tutorial's code
 
     $ python ./wallet_tutorial_series/tutorial_02/main.py
 
-Hopefully, you'll see a user interface pop up with the same info as in **Step 2**
+Hopefully, you'll see a user interface pop up with the same info as in **Step 2**.
+This should be identical to *tutorial_01*
 
 --------------------------------------------------------------------------------
 
-# Explanation of Code
+# Explanation of Cod
 
 ## configuration.py
 
@@ -82,20 +83,20 @@ This file is the focus of this tutorial.
 Compare it with **tutorial_01**'s **main.py** - **Configuration()** class to understand 
 better what is going on here. 
 
-### New Parameter **altcoin**
+### New Parameter: *altcoin*
 
 First, you'll notice **Configuration()** accepts a *string* called **altcoin** as 
 a parameter.
 This is for modularity, in the future this can be used to get "litecoin's" 
 configuration file as well as bitcoin's
 
-### New Member Function **read()**
+### New Member Function: *read()*
 
 Next, you'll notice a new member function **read(self)**.
 This will look for **altcoin**'s configuration file. It will read it and turn 
 it into a datastructure we can use.
 
-### What is **class Fake_Head()**?
+### What is: *class Fake_Head()*?
 
 The Bitcoin configuration doesn't comply with the standards expected from 
 **ConfigParser**, so this is an attempt to fake it by first attaching a fake header 
@@ -110,10 +111,5 @@ The only other thing we need to worry about is changing **command.py**'s
 ## Success
 
 If everything went as planned, executing the script should provide the same result 
-as in tutorial_01, except the configuration file is being dynamically read as 
+as in **tutorial_01**, except the configuration file is being dynamically read as 
 opposed to having the information hard coded into our app.
-
---------------------------------------------------------------------------------
-
-This isn't a wallet just, yet. But now we have the pieces in place to make one.
-
