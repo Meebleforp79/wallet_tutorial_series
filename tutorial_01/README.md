@@ -81,7 +81,7 @@ Follow instructions here: https://github.com/jgarzik/python-bitcoinrpc
 
 #### Make sure RPC is working
 
-    $ bitcoind get info
+    $ bitcoind getinfo
 
 ## Step 5
 
@@ -89,7 +89,7 @@ Follow instructions here: https://github.com/jgarzik/python-bitcoinrpc
 
     $ python ./wallet_tutorial_series/tutorial_01/main.py
 
-Hopefully, you'll see a user interface pop up with the same info as in **Step 3**
+Hopefully, you'll see a user interface pop up with the same info as in **Step 4**
 
 --------------------------------------------------------------------------------
 
