@@ -85,7 +85,7 @@ Follow instructions here: https://github.com/jgarzik/python-bitcoinrpc
 
 ## Step 5
 
-### Run this tutorial'ss code
+### Run this tutorial's code
 
     $ python ./wallet_tutorial_series/tutorial_01/main.py
 
@@ -102,7 +102,7 @@ This is the only file in this tutorial. It has 4 parts to it: **Main()**, **Comm
 Since this is a bitcoin wallet tutorial and not a Python, or PyQt tutorial.
 I will spend most of my time explaining the aspects pertaining to bitcoin.
 
-### class Command
+### class Command()
 
 This class is what communicates with **bitcoind**.
 
