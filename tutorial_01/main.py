@@ -25,9 +25,13 @@ class Command():
         self.access = AuthServiceProxy(self.conf.get_uri())
     
     def get_info(self):
-        #self.info = self.access.getinfo()
+        self.info = self.access.getinfo()
+        return self.info
+    
+    def list_accounts(self):
         self.info = self.access.listaccounts()
         return self.info
+
 
 class UI(QtGui.QWidget):
     def __init__(self):
