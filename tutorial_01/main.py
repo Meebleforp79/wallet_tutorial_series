@@ -12,26 +12,6 @@ from bitcoinrpc.authproxy import AuthServiceProxy
 
 
 ################################################################################
-#Configuration: information from ~/.bitcoin/bitcoin.conf to connect to bitcoind
-################################################################################
-class Configuration():
-    def __init__(self):
-        self.protocol = "http"
-        self.username = "rpc_username" #Change this to match your ~/.bitcoin/bitcoin.conf
-        self.password = "rpc_password" #Change this to match your ~/.bitcoin/bitcoin.conf
-        self.ip       = "localhost"
-        self.port     = "8332"
-    
-    ############################################################################
-    #Description: This is the uri used to connect to bitcoind
-    #Parameters: none
-    #Return value: string
-    ############################################################################
-    def get_uri(self):
-        self.uri = self.protocol+"://"+self.username+":"+self.password+"@"+self.ip+":"+self.port
-        return self.uri
-
-################################################################################
 #Command: Send commands to bitcoind and fetch results
 ################################################################################
 class Command():
@@ -56,6 +36,26 @@ class Command():
     def list_accounts(self):
         self.info = self.access.listaccounts()
         return self.info
+
+################################################################################
+#Configuration: information from ~/.bitcoin/bitcoin.conf to connect to bitcoind
+################################################################################
+class Configuration():
+    def __init__(self):
+        self.protocol = "http"
+        self.username = "rpc_username" #Change this to match your ~/.bitcoin/bitcoin.conf
+        self.password = "rpc_password" #Change this to match your ~/.bitcoin/bitcoin.conf
+        self.ip       = "localhost"
+        self.port     = "8332"
+    
+    ############################################################################
+    #Description: This is the uri used to connect to bitcoind
+    #Parameters: none
+    #Return value: string
+    ############################################################################
+    def get_uri(self):
+        self.uri = self.protocol+"://"+self.username+":"+self.password+"@"+self.ip+":"+self.port
+        return self.uri
 
 ################################################################################
 #Create the User Interface

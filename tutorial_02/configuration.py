@@ -3,6 +3,10 @@
 
 import os
 
+################################################################################
+#Configuration: information from ~/.bitcoin/bitcoin.conf to connect to bitcoind
+#Parameters: string altcoin I.E. "bitcoin", "litecoin", etc.
+################################################################################
 class Configuration:
     def __init__(self, altcoin):
         self.altcoin       = altcoin
@@ -10,10 +14,20 @@ class Configuration:
         self.protocol      = "http"
         self.configuration = self.read()
     
+    ############################################################################
+    #Description: This is the uri used to connect to bitcoind
+    #Parameters: none
+    #Return value: string
+    ############################################################################
     def get_uri(self):
         self.uri = self.protocol+"://"+self.configuration["rpcuser"]+":"+self.configuration["rpcpassword"]+"@"+self.configuration["rpcconnect"]+":"+self.configuration["rpcport"]
         return self.uri
     
+    ############################################################################
+    #Description: reads the ~/.bitcoin/bitcoin.conf file
+    #Parameters: none
+    #Return value: dictionary
+    ############################################################################
     def read(self):
         from ConfigParser import SafeConfigParser
         
@@ -35,6 +49,9 @@ class Configuration:
         config_parser.readfp(Fake_Head(open(os.path.join(self.directory, self.altcoin+".conf"))))
         return dict(config_parser.items("all"))
 
+################################################################################
+#Configuration entry point
+################################################################################
 def main():
     exit()
 
